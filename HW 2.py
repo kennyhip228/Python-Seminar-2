@@ -10,7 +10,10 @@ def findNumbers(sumOfNumbers, prodOfNumbers):
     else:
         x = (sumOfNumbers + math.sqrt(discriminant)) / 2
         y = (sumOfNumbers - math.sqrt(discriminant)) / 2
-        print(f'Вы загадали числа {round(x)} и {round(y)}')
+        if x*y != prodOfNumbers or x+y != sumOfNumbers:
+            print("Вы ввели неверные значения")
+        else:
+            print(f'Вы загадали числа {round(x)} и {round(y)}')
 
 sumOfNumbers = int(input("Введите сумму двух загаданных чисел: "))
 prodOfNumbers = int(input("Введите произведение этих же чисел: "))
